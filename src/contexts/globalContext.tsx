@@ -1,10 +1,18 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, SetStateAction, useState } from "react";
 
-export const GlobalContext = createContext({});
 
 interface GlobalContextProps {
   children: ReactNode;
 }
+
+interface GlobalContextValue {
+  isLoginPage: boolean,
+  isLogged: boolean,
+  setIsLoginPage: React.Dispatch<SetStateAction<boolean>>
+  setIsLogged: React.Dispatch<SetStateAction<boolean>>
+}
+
+export const GlobalContext = createContext<GlobalContextValue>({} as GlobalContextValue);
 
 export function GlobalContextProvider({ children }: GlobalContextProps) {
 

@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Login from '../../components/Login'
 import Register from '../../components/Register'
 import Container from './style'
+import { GlobalContext } from './../../contexts/globalContext';
 const AuthenticationPage = () => {
-    const [IsLoginPage, setIsLoginPage] = useState(true)
+    const { isLoginPage } = useContext(GlobalContext)
     return (
         <Container>
             {
-                IsLoginPage 
+                isLoginPage
                 ? (
                     <Login/>
                 )
