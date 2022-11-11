@@ -16,7 +16,7 @@ export const GlobalContext = createContext<GlobalContextValue>({} as GlobalConte
 
 export function GlobalContextProvider({ children }: GlobalContextProps) {
 
-  const [isLoginPage, setIsLoginPage] = useState(true)
+  const [isLoginPage, setIsLoginPage] = useState(false)
   const [isLogged, setIsLogged] = useState(false)
 
   const globalContextValue = {
