@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Login from '../../components/Login'
+import Register from '../../components/Register'
 import Container from './style'
 const AuthenticationPage = () => {
+    const [IsLoginPage, setIsLoginPage] = useState(true)
     return (
         <Container>
-            <h1>Authentication Page</h1>
+            {
+                IsLoginPage 
+                ? (
+                    <Login/>
+                )
+                : (
+                    <Register/>
+                )
+            }
         </Container>
     )
 }
