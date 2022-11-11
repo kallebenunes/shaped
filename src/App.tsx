@@ -6,7 +6,7 @@ import AuthenticationPage from "./pages/AuthenticationPages";
 import GlobalStyle from "./styles/globaStyles";
 
 function App() {
-  const [isLogged, setIsLogged] = useState(true);
+  const [isLogged, setIsLogged] = useState(false);
 
   return (
     <>
