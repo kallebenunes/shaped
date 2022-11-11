@@ -18,6 +18,30 @@ const Container = styled.div`
 
     form {
       width: 55%;
+
+      button {
+        width: 100%;
+        display: block;
+        padding: .8rem;
+        font-weight: 700;
+        border-radius: 6px;
+
+        &:first-of-type {
+          background: #3E7D89;
+          border: none;
+          border-radius: 6px;
+          color: #ffffff;
+          margin-top: 1.2rem;
+          margin-bottom: 1rem;
+        }
+
+        &:last-of-type {
+          border: 1px solid #3E7D89;
+          color: #3E7D89;
+          background: #ffffff;
+        }
+      }
+
     }
   }
 `;
@@ -29,7 +53,7 @@ export const FormGroup = styled.div`
 
   label {
     width: 100%;
-    input {
+    input, select {
       width: 100%;
       display: block;
       padding: .7rem 1rem;
