@@ -28,7 +28,7 @@ const Container = styled.main`
         }
 
         input {
-          padding: 0.5rem 1rem;
+          padding: 0.7rem 1rem;
           width: 100%;
           display: block;
           border: 1px solid #CECFD1;

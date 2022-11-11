@@ -6,24 +6,18 @@ import React, {
 import { GlobalContext } from "../../contexts/globalContext";
 import Container from "./style";
 import banner from './../../assets/banner-home.png'
+import { useForm } from 'react-hook-form';
 
 
 const Login = () => {
-  const [user, setuser] = useState("");
-  const [password, setPassword] = useState("");
 
   const { setIsLogged, setIsLoginPage } = useContext(GlobalContext);
 
-  function handlePassword(event: ChangeEvent<HTMLInputElement>) {
-    setPassword(event.target.value);
-  }
+  const {register, handleSubmit} = useForm()
 
-  function handleUser(event: ChangeEvent<HTMLInputElement>) {
-    setuser(event.target.value);
-  }
-
-  function handleLogin(event: React.MouseEvent) {
-    event.preventDefault();
+  
+  function handleLogin(data: any) {
+    console.log(data)
     setIsLogged(true);
   }
 
@@ -44,20 +38,21 @@ const Login = () => {
         </div>
       </aside>
       <div>
-        <form>
+        <form onSubmit={handleSubmit(handleLogin)}>
           <h1>Cadastro</h1>
           <label>
-            <input onChange={handleUser} type="text" placeholder="Usuário" />
+            <input required type="text" placeholder="Usuário" {...register("usernmae")} />
           </label>
           <label>
             <input
-              onChange={handlePassword}
+              required
               type="password"
               placeholder="Senha"
+              {...register("password")}
             />
           </label>
           <span>Esqueceu sua senha ?</span>
-          <button onClick={handleLogin} type="submit">
+          <button type="submit">
             Logar
           </button>
           <button onClick={handleRegister}>Cadastre-se</button>
