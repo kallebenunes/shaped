@@ -8,7 +8,6 @@ import { GlobalContext, GlobalContextProvider } from "./contexts/globalContext";
 
 function App() {
   const { isLogged } = useContext(GlobalContext)
-  console.log(isLogged)
 
   return (
     <>
