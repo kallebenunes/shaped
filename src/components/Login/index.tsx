@@ -3,17 +3,21 @@ import Container from './style'
 const Login = () => {
     return (
         <Container>
-            <div>
+            <aside>
                 Aside Content
-            </div>
+            </aside>
             <div>
                 <form>
+                    <h1>Cadastro</h1>
                     <label>
                         <input type="text" placeholder='Usuário' />
                     </label>
                     <label>
-                        <input type="text" placeholder='Senha' />
+                        <input type="password" placeholder='Senha' />
                     </label>
+                    <span>Esqueceu sua senha ?</span>
+                    <button type="submit">Logar</button>
+                    <button>Cadastre-se</button>
                 </form>
             </div>
         </Container>
