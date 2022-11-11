@@ -1,14 +1,24 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useForm } from 'react-hook-form'
 import Container, { FormGroup } from './style'
+import { GlobalContext } from './../../contexts/globalContext';
 
 
 const Register = () => {
 
     const {register, handleSubmit} = useForm()
 
+    const {setIsLogged, setIsLoginPage} = useContext(GlobalContext)
+
     function submitForm(data: any){
         console.log(data)
+
+        setIsLogged(true)
+    }
+
+    function handleCancel(event: React.MouseEvent){
+        event.preventDefault()
+        setIsLoginPage(true)
     }
     return (
         <Container>
@@ -94,7 +104,7 @@ const Register = () => {
                         </label>
                     </FormGroup>
                     <button type='submit'> Cadastrar </button>
-                    <button>Cancelar </button>
+                    <button type="button" onClick={handleCancel}>Cancelar </button>
                 </form>
             </div>
         </Container>
