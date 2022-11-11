@@ -7,11 +7,29 @@ const Container = styled.div`
 
   aside {
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    div {
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        max-width: 70%;
+        text-align: center;
+        margin-top: 1rem;
+        font-weight: 600;
+        font-size: 1.4rem;
+      }
+    }
   }
 
   > div {
     width: 50%;
-    background: #E4EBEE;
+    background: #e4ebee;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,12 +40,12 @@ const Container = styled.div`
       button {
         width: 100%;
         display: block;
-        padding: .8rem;
+        padding: 0.8rem;
         font-weight: 700;
         border-radius: 6px;
 
         &:first-of-type {
-          background: #3E7D89;
+          background: #3e7d89;
           border: none;
           border-radius: 6px;
           color: #ffffff;
@@ -36,27 +54,27 @@ const Container = styled.div`
         }
 
         &:last-of-type {
-          border: 1px solid #3E7D89;
-          color: #3E7D89;
+          border: 1px solid #3e7d89;
+          color: #3e7d89;
           background: #ffffff;
         }
       }
-
     }
   }
 `;
 
 export const FormGroup = styled.div`
   display: flex;
-  gap: .5rem;
-  margin: .7rem 0;
+  gap: 0.5rem;
+  margin: 0.7rem 0;
 
   label {
     width: 100%;
-    input, select {
+    input,
+    select {
       width: 100%;
       display: block;
-      padding: .7rem 1rem;
+      padding: 0.7rem 1rem;
       border-radius: 6px;
       border: 1px solid #788089;
     }

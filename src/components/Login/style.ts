@@ -4,7 +4,7 @@ const Container = styled.main`
   display: flex;
   width: 100vw;
   height: 100vh;
-  div {
+  > div {
     width: 50%;
     background: #e4ebee;
     display: flex;
@@ -68,6 +68,24 @@ const Container = styled.main`
 
   aside {
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    div {
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        max-width: 70%;
+        text-align: center;
+        margin-top: 1rem;
+        font-weight: 600;
+        font-size: 1.4rem;
+      }
+    }
   }
 `;
 
